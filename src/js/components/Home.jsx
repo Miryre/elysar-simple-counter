@@ -1,28 +1,23 @@
-import React from "react";
+import SimpleCounter from "./SimpleCounter";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+// let counter = 0;
 
-//create your first component
+// setInterval(function () {
+//   console.log(counter);
+//   counter++;
+// }, 1000);
+
 const Home = () => {
-	return (
-		<div className="text-center">
-            
-
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+  return (
+    <div className="text-center">
+      <SimpleCounter
+        thousandsDigit={2}
+        hundredsDigit={5}
+        tensDigit={7}
+        onesDigit={0}
+      />
+    </div>
+  );
 };
 
 export default Home;
