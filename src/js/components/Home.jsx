@@ -7,15 +7,20 @@ import SimpleCounter from "./SimpleCounter";
 //   counter++;
 // }, 1000);
 
-const Home = () => {
+function calculateSeconds(aCounter, placeValue) {
+  return Math.floor(aCounter / placeValue) % 10;
+}
+
+const Home = ({ counter }) => {
   return (
     <div className="text-center">
       <SimpleCounter
-        thousandsDigit={2}
-        hundredsDigit={5}
-        tensDigit={7}
-        onesDigit={0}
+        thousandsDigit={calculateSeconds(counter, 1000)}
+        hundredsDigit={calculateSeconds(counter, 100)}
+        tensDigit={calculateSeconds(counter, 10)}
+        onesDigit={calculateSeconds(counter, 1)}
       />
+      {counter}
     </div>
   );
 };
