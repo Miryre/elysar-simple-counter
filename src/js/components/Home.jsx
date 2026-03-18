@@ -15,6 +15,8 @@ const Home = ({ counter }) => {
   return (
     <div className="text-center">
       <SimpleCounter
+        hundredthousandsDigit={calculateSeconds(counter, 100000)}
+        tenthousandsDigit={calculateSeconds(counter, 10000)}
         thousandsDigit={calculateSeconds(counter, 1000)}
         hundredsDigit={calculateSeconds(counter, 100)}
         tensDigit={calculateSeconds(counter, 10)}

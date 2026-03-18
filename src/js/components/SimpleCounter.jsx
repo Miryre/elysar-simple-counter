@@ -1,4 +1,6 @@
 const SimpleCounter = ({
+  hundredthousandsDigit,
+  tenthousandsDigit,
   thousandsDigit,
   hundredsDigit,
   tensDigit,
@@ -22,6 +24,8 @@ const SimpleCounter = ({
           </svg>
         </div>
         {/* divs for the seconds */}
+        <div className="seconds hundredthousands px-3">{hundredthousandsDigit}</div>
+        <div className="seconds tenthousands px-3">{tenthousandsDigit}</div>
         <div className="seconds thousands px-3">{thousandsDigit}</div>
         <div className="seconds hundreds px-3">{hundredsDigit}</div>
         <div className="seconds tens px-3">{tensDigit}</div>
